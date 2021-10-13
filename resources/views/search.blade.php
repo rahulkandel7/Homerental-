@@ -18,7 +18,7 @@
                 <div class="relative w-full">
                     <form action="{{ route('search') }}" method="get">
                         <span class="text-primary pl-5 text-xl"><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="text" name="search" id="search" placeholder="Where you want to go?" class="border-0 bg-transparent focus:border-0 focus:ring-transparent outline-none mt-1" value="{{request('search')}}">
+                        <input type="text" name="search" id="search" placeholder="Where you want to go?" class="border-0 bg-transparent focus:border-0 focus:ring-transparent outline-none mt-1 text-sm md:text-base" value="{{request('search')}}">
                         <input type="submit" value="Search" class="hover:bg-primary cursor-pointer h-12 px-7 rounded-full text-white absolute right-0" >
                     </form>
                 </div>
