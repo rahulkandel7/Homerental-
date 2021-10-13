@@ -85,7 +85,7 @@
                                         Find a Place to Rent
                                       </p>
                                       <p class="font-sm text-gray-500 " style="font-size: .8rem">
-                                        How Renting works on Our Platform
+                                        Why Homie Nepal To Find a Place To Rent
                                       </p>
                                   </a>
                                 </li>
@@ -95,7 +95,7 @@
                                           Rent Out Your Place
                                         </p>
                                         <p class="font-sm text-gray-500 " style="font-size: .8rem">
-                                          How to Rent Out Your Properties Online
+                                            Why Homie Nepal To Rent Your Place
                                         </p>
                                     </a>
                                 </li>
