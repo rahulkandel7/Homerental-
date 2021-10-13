@@ -37,8 +37,8 @@
                             <div class="relative w-full">
                                 <form action="{{ route('search') }}" method="get">
                                     <span class="text-primary pl-5 text-xl"><i class="fas fa-map-marker-alt"></i></span>
-                                    <input type="text" name="search" id="search" placeholder="Where you want to go?" class="border-0 bg-transparent focus:border-0 focus:ring-transparent outline-none mt-1">
-                                    <input type="submit" value="Search" class="hover:bg-primary cursor-pointer h-12 px-7 rounded-full text-white absolute right-0" >
+                                    <input type="text" name="search" id="search" placeholder="Where you want to go?" class="border-0 bg-transparent focus:border-0 focus:ring-transparent outline-none mt-1 text-sm md:text-base">
+                                    <input type="submit" value="Search" class="hover:bg-primary cursor-pointer h-12 px-4 md:px-7 rounded-full text-white absolute right-0" >
                                 </form>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
     <!-- Info About US-->
         <div class="w-11/12 mx-auto">
             <div class="grid md:grid-cols-2 grid-cols-1">
-                <div>
+                <div class="mb-3">
                     <img src="{{asset('images/bg.webp')}}" class="rounded-lg">
                 </div>
 
@@ -117,7 +117,7 @@
                         It's Easier Than Ever to Find a Home with <span class="text-primary font-bold">Homie Nepal</span>
                     </h2>
 
-                    <p class="text-gray-700 py-5 text-justify">
+                    <p class="text-gray-700 py-5 text-justify ">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.
                     </p>
 

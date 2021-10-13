@@ -254,7 +254,7 @@
 
         <footer>
             <div class="w-full bg-primary">
-                <div class="w-11/12 grid mx-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <div class="w-11/12 grid mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
                     <div class="py-4">
                         <div class="lg:flex lg:justify-center lg:items-center">
                             <div class=" rounded-lg bg-white p-2 w-20 md:w-auto ">
