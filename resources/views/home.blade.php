@@ -31,7 +31,9 @@
                             Find your Perfect Place with <span class="text-primary">Homie Nepal</span>
                         </h2>
                         <p class="text-gray-500 pt-2 text-sm md:text-base md:pt-4 text-justify max-w-md" style="font-family: 'Poppins', serif;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non dicta dolorem facilis minima iusto quam minus itaque asperiores consequuntur. Ducimus atque repellendus nihil nemo expedita ab numquam dolorum possimus.
+                            Looking for a room or a house to rent is tough and inconvenient since you have to deal with strangers
+                            and it is also a waste of time. To address your concerns, we created our website Homienepal.com,
+                            where you can discover rooms and houses for rent as needed.
                         </p>
                         <div class="bg-gray-200 rounded-full shadow-md  h-12 mt-2 flex">
                             <div class="relative w-full">
@@ -61,7 +63,7 @@
             </p>
 
             <div class="w-10/12 mx-auto mt-5">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div class="bg-white shadow-xl rounded-lg service transition-all">
                         <div class="flex justify-center items-center">
                             <img src="{{asset('images/background/hero.png')}}" alt="" class="w-32 py-2">
@@ -71,7 +73,9 @@
                                 Save Time & Money
                             </p>
                             <p class="text-center text-gray-500 font-light text-sm px-5 py-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum molestiae officiis aperiam error voluptates eum ratione? Reprehenderit, ipsa odit tempore labore eveniet, ab tempora et in illo itaque deserunt excepturi.
+                                Homie Nepal offers the best accommodations available in the various regions. We found and placed
+                                ourselves here through our own quest. You may view the various rooms and apartments available while
+                                sitting at home, saving you time and money that you would have spent searching for them.
                             </p>
                     </div>
 
@@ -84,7 +88,9 @@
                                 A Responsive Team
                             </p>
                             <p class="text-center text-gray-500 font-light text-sm px-5 py-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum molestiae officiis aperiam error voluptates eum ratione? Reprehenderit, ipsa odit tempore labore eveniet, ab tempora et in illo itaque deserunt excepturi.
+                                Homie Nepal has the most dedicated team of people waiting for your response. Our clients can count on
+                                us to be available 24 hours a day, seven days a week. We respond to your inquiries and make the finest
+                                recommendations to you. Our main goal is to offer you with the finest service possible.
                             </p>
                     </div>
 
@@ -97,7 +103,9 @@
                                 Fixed Fee & Support
                             </p>
                             <p class="text-center text-gray-500 font-light text-sm px-5 py-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum molestiae officiis aperiam error voluptates eum ratione? Reprehenderit, ipsa odit tempore labore eveniet, ab tempora et in illo itaque deserunt excepturi.
+                                We will give you with complete help till you have selected the perfect accommodation for your needs.
+                                The rates stated are preset fees, and we publish them in accordance with the running rental fee in the
+                                area. The pricing will be among the most adjustable on the market.
                             </p>
                     </div>
                 </div>
@@ -118,7 +126,13 @@
                     </h2>
 
                     <p class="text-gray-700 py-5 text-justify ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus quo quas ipsam repudiandae quis, perspiciatis porro suscipit ipsa hic eum. Rem dolorem doloremque porro, error ducimus est quo aliquid.
+                        Homie Nepal is actively involved in delivering the greatest accommodations to clients who are looking
+                        for a suitable location to start their new life. We are eager to give our customers with a welcoming and
+                        homily-like environment. We look for and give the ideal location for you to rent out your space. We are
+                        working hard to provide the best service possible to our customers. We search, observe the location,
+                        and only add it to our website if it is suitable. We offer complete assistance both before and after you
+                        rent from us. If you like the environment and the facilities, you may meet with the owner personally. It is
+                        a simpler, safer, and more convenient approach to rent a residence from us.
                     </p>
 
                     <a href="" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Know More</a>

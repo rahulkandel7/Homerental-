@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="flex justify-center">
-                    <a href="{{ route('register') }}" class="text-gray-600 hover:text-primary text-sm hover:underline">
+                    <a href="{{ route('login') }}" class="text-gray-600 hover:text-primary text-sm hover:underline">
                         Already Have a Account?
                     </a>
                 </div>

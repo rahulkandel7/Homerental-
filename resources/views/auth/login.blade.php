@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('main')
-<div class="w-10/12 mx-auto">
+<div class="md:w-10/12 mx-auto">
     <div class="shadow-lg rounded-lg h-auto w-93 my-10">
         <div class="flex justify-center">
             <img src="{{asset('images/LOGO.svg')}}" class="w-32 ">
         </div>
         
-        <div class="flex justify-center my-2">
+        <div class="flex justify-center my-2 px-6 md:px-0">
             <h2 class=" text-teritory" style="font-family: 'Poppins', serif;">
                 Login To Find your Perfect Place with <span class="text-primary font-semibold">Homie Nepal</span>
             </h2>
@@ -48,7 +48,7 @@
 
                 <div class="flex justify-center">
                     <a href="{{ route('register') }}" class="text-gray-600 hover:text-primary text-sm hover:underline">
-                        Dont't Have a Account?
+                        Don't Have a Account?
                     </a>
                 </div>
             

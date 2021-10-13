@@ -20,7 +20,10 @@
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5">
-                        It’s payers keepers! Once you’ve paid the first month's rent, the place is yours. You’ll receive an immediate confirmation which can often be used as proof of residency for any visa applications or resident permits you may need. The beauty of booking online means there’s no need for viewings. We believe that no one should be disadvantaged based on where they live.
+                        You can now search, view, and rent a room or a home from the comfort of your own home. You don&#39;t
+                        have to go house by house looking for a property to rent. We seek for the nicest rooms and residences
+                        available and make them available to you through our website and apps. Our staff is working really hard
+                        to offer you with the finest services possible.
                     </p>
                 </div>
 
@@ -40,7 +43,10 @@
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5 mb-5 md:mb-0">
-                        We’ve engineered a wealth of features to help you find your perfect place, pronto. From search alerts that land new listings straight in your email to pre-qualification filters, we champion superior matching. Need some help? Our Customer Service team is ready to offer you some speedy support!
+                        Homie Nepal allows you to look for available rooms in various areas. You may search and explore the
+                        properties listed on the website. You may search based on your requirements and your preferred
+                        location. We classify the properties based on their amenities and services. By sitting in one location, you
+                        may visit many locations at the same time.
                     </p>
                 </div>
             <!-- Search fast close -->
@@ -52,7 +58,10 @@
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5">
-                        Before booking anything, you deserve to know everything. Check out a listing’s up-to-date availability, amenities, photos, videos, floor plans, and translated descriptions. Feel even more confident about booking a place by checking it out on the map in the listing gallery. Like what you see? Favourite it! Feel even more confident about booking with our Neighbourhood Guides. Get clued-up about the area you want to move to.
+                        You may have a lot of inquiries before deciding on an apartment or a room to reside in. You can watch
+                        images and videos of the location here to get a sense of what it&#39;s like. You may also learn everything
+                        there is to know about the location. Only if you like the room will we be able to forward with the
+                        procedure.
                     </p>
                 </div>
 
@@ -68,11 +77,13 @@
 
                 <div class="px-5">
                     <h2 class="font-bold text-primary text-xl">
-                        Safe and Sound
+                        Geniune Landlords
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5 mb-5 md:mb-0">
-                        Deposits, rent. They needn’t be scary words! On our platform, all of your payments are protected. We have anti-fraud measures to safeguard your experience and rest assured, if the landlord cancels, you’ll receive a full refund. We securely hold your first month’s rent until 48 hours after your move-in. Based on our ‘no news is good news’ approach, we’ll only payout the advertiser after this time.
+                        The available rooms are just those that have been confirmed by our team. We only recommend sites
+                        that have been thoroughly reviewed. Nobody is allowed to put the phony flats here. The featured
+                        apartments will be available only when they have been confirmed by our complete staff.
                     </p>
                 </div>
         <!-- Safe close -->

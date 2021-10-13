@@ -16,11 +16,13 @@
             <!-- Cast Home -->
                 <div class="px-5">
                     <h2 class="font-bold text-primary text-xl">
-                        Cast the net wide
+                        Spread a large net
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5">
-                        It’s payers keepers! Once you’ve paid the first month's rent, the place is yours. You’ll receive an immediate confirmation which can often be used as proof of residency for any visa applications or resident permits you may need. The beauty of booking online means there’s no need for viewings. We believe that no one should be disadvantaged based on where they live.
+                        Many of the rental people will look at your listing and decide whether or not to rent from you. You don&#39;t
+                        have to look for and wander around looking for the right individual to rent your apartments. Many
+                        individuals will look at your location and judge whether or not they like it.
                     </p>
                 </div>
 
@@ -36,11 +38,13 @@
 
                 <div class="px-5">
                     <h2 class="font-bold text-primary text-xl">
-                        100% control over your rental property management
+                        100% control over the rental provide
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5 mb-5 md:mb-0">
-                        We’ve engineered a wealth of features to help you find your perfect place, pronto. From search alerts that land new listings straight in your email to pre-qualification filters, we champion superior matching. Need some help? Our Customer Service team is ready to offer you some speedy support!
+                        Your landlord will have complete authority over your apartment. You may choose whether or not to put
+                        that renting person in your spot. We will not interfere with your choices. We just want to point you in
+                        the direction of the proper individual for the position.
                     </p>
                 </div>
             <!-- Control close -->
@@ -48,11 +52,13 @@
             <!-- Meet  -->
                 <div class="px-5">
                     <h2 class="font-bold text-primary text-xl">
-                        Meet your match: screen tenants with fine-tuned filters
+                        Find your match rental
                     </h2>
 
                     <p class="text-gray-500 text-sm text-justify pt-5">
-                        Before booking anything, you deserve to know everything. Check out a listing’s up-to-date availability, amenities, photos, videos, floor plans, and translated descriptions. Feel even more confident about booking a place by checking it out on the map in the listing gallery. Like what you see? Favourite it! Feel even more confident about booking with our Neighbourhood Guides. Get clued-up about the area you want to move to.
+                        You may search for people based on your requirements and only include those you like. Persons who
+                        appreciate your apartment, plans, rules, etc. will only come to you, so you won&#39;t have to bargain with
+                        many people or look for the individual on your own.
                     </p>
                 </div>
 

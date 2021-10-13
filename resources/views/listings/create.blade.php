@@ -261,7 +261,7 @@
                         </label>
                         <input type="text" name="age_range" id="age_range" class="sm:w-auto border-0 focus:ring-primary shadow-md rounded-md @if ($errors->has('age_range'))
                         border-red-500 border-b-2 focus:border-primary
-                        @endif" value="{{old('age_range')}}">
+                        @endif" value="{{old('age_range')}}" placeholder="20-40">
 
                         @error('age_range')
                             <p class="text-red-400 py-2 text-sm">
@@ -277,7 +277,7 @@
                         </label>
                         <input type="text" name="tenant_type" id="tenant_type" class="sm:w-auto border-0 my-2 focus:ring-primary shadow-md rounded-md @if ($errors->has('tenant_type'))
                         border-red-500 border-b-2 focus:border-primary
-                        @endif" value="{{old('tenant_type')}}">
+                        @endif" value="{{old('tenant_type')}}" placeholder="Students">
 
                         @error('tenant_type')
                             <p class="text-red-400 py-2 text-sm">
