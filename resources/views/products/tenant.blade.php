@@ -4,7 +4,7 @@
 
     <div class="11/12 mx-auto">
         <div class="flex justify-center items-center">
-            <h2 class="font-semibold my-3 text-primary text-2xl">
+            <h2 class="font-semibold my-3 text-primary text-2xl px-4">
                 Why Homie Nepal To Find a Place To Rent
             </h2>
         </div>
@@ -24,13 +24,13 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
                     <img src="{{asset('images/tenant/book.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Book Home Close -->
 
             <!-- Search fast -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
@@ -39,7 +39,7 @@
                         Search fast, search smart
                     </h2>
 
-                    <p class="text-gray-500 text-sm text-justify pt-5">
+                    <p class="text-gray-500 text-sm text-justify pt-5 mb-5 md:mb-0">
                         We’ve engineered a wealth of features to help you find your perfect place, pronto. From search alerts that land new listings straight in your email to pre-qualification filters, we champion superior matching. Need some help? Our Customer Service team is ready to offer you some speedy support!
                     </p>
                 </div>
@@ -56,13 +56,13 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
                     <img src="{{asset('images/tenant/real.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Real Feel Close -->
 
             <!-- Safe -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
@@ -71,7 +71,7 @@
                         Safe and Sound
                     </h2>
 
-                    <p class="text-gray-500 text-sm text-justify pt-5">
+                    <p class="text-gray-500 text-sm text-justify pt-5 mb-5 md:mb-0">
                         Deposits, rent. They needn’t be scary words! On our platform, all of your payments are protected. We have anti-fraud measures to safeguard your experience and rest assured, if the landlord cancels, you’ll receive a full refund. We securely hold your first month’s rent until 48 hours after your move-in. Based on our ‘no news is good news’ approach, we’ll only payout the advertiser after this time.
                     </p>
                 </div>
