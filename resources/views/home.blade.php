@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="py-10 px-10 md:px-0">
-                        <img src="{{asset('images/background/hero.png')}}" alt="">
+                        <img src="{{asset('images/background/bg.svg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div class="bg-white shadow-xl rounded-lg service transition-all">
                         <div class="flex justify-center items-center">
-                            <img src="{{asset('images/background/hero.png')}}" alt="" class="w-32 py-2">
+                            <img src="{{asset('images/services/savetime.svg')}}" alt="" class="w-32 py-2">
 
                         </div>
                             <p class="text-gray-500 font-semibold text-center pt-3">
@@ -81,7 +81,7 @@
 
                     <div class="bg-white shadow-xl service rounded-lg">
                         <div class="flex justify-center items-center">
-                            <img src="{{asset('images/background/hero.png')}}" alt="" class="w-32 py-2">
+                            <img src="{{asset('images/services/team.svg')}}" alt="" class="w-32 py-2">
 
                         </div>
                             <p class="text-gray-500 font-semibold text-center pt-3">
@@ -96,7 +96,7 @@
 
                     <div class="bg-white shadow-xl service rounded-lg">
                         <div class="flex justify-center items-center">
-                            <img src="{{asset('images/background/hero.png')}}" alt="" class="w-32">
+                            <img src="{{asset('images/services/support.svg')}}" alt="" class="w-32">
 
                         </div>
                             <p class="text-gray-500 font-semibold text-center pt-3">

@@ -35,7 +35,7 @@ class FrontendController extends Controller
     public function search(Request $request)
     {
         $search = $request->search;
-        $listings = Listing::where('tole','LIKE', "%{$search}%")->orWhere('municipality','LIKE', "%{$search}%")->get();
+        $listings = Listing::where('tole','LIKE', "%{$search}%")->orWhere('municipality','LIKE', "%{$search}%")->paginate(1);
         return view('search',compact('listings'));
     }
 

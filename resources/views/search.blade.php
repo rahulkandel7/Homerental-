@@ -51,12 +51,9 @@
                     </a>
                 <!-- Item Display Close -->
             @endforeach
-
-            
-
-            
-
         </div>
+
+        {{$listings->links()}}
         
     </div>
 @endsection

@@ -28,13 +28,13 @@
                 </div>
 
                 <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight" data-wow-delay="2s">
-                    <img src="{{asset('images/tenant/book.webp')}}" class="h-52 mt-5">
+                    <img src="{{asset('images/tenant/confirmed.svg')}}" class="h-52 mt-5">
                 </div>
             <!-- Book Home Close -->
 
             <!-- Search fast -->
                 <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft" data-wow-delay="2s">
-                    <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
+                    <img src="{{asset('images/tenant/search.svg')}}" class="h-52 mt-5">
                 </div>
 
                 <div class="px-5 wow fadeInRight" data-wow-delay="2s">
@@ -66,13 +66,13 @@
                 </div>
 
                 <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight">
-                    <img src="{{asset('images/tenant/real.webp')}}" class="h-52 mt-5">
+                    <img src="{{asset('images/tenant/feel.svg')}}" class="h-52 mt-5">
                 </div>
             <!-- Real Feel Close -->
 
-            <!-- Safe -->
+            <!-- Geniune -->
                 <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft">
-                    <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
+                    <img src="{{asset('images/tenant/geniune.svg')}}" class="h-52 mt-5">
                 </div>
 
                 <div class="px-5 wow fadeInRight">
@@ -86,7 +86,7 @@
                         apartments will be available only when they have been confirmed by our complete staff.
                     </p>
                 </div>
-        <!-- Safe close -->
+        <!-- Geniune close -->
 
         </div>
 
