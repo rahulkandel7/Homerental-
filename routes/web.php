@@ -25,7 +25,7 @@ Route::get('/landlord-faq', [App\Http\Controllers\FrontendController::class, 'lf
 
 
 Route::get('/search',[App\Http\Controllers\FrontendController::class, 'search'])->name('search');
-Route::get('/looks/{id}',[App\Http\Controllers\FrontendController::class, 'looks'])->middleware(['auth'])->name('look');
+Route::get('/view/{id}',[App\Http\Controllers\FrontendController::class, 'looks'])->middleware(['auth'])->name('look');
 Route::get('/profile/{id}', [App\Http\Controllers\FrontendController::class, 'profile'])->name('profile')->middleware('auth');
 
 
@@ -37,8 +37,14 @@ Route::middleware('auth')->prefix('profile')->group(function() {
     Route::resource('users', App\Http\Controllers\User\UserController::class);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth', 'isAdmin'])->prefix('admin')->name('admin.')->group(function() {
+    Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class);
+    Route::resource('tenants', App\Http\Controllers\Admin\TenantController::class);
+    Route::resource('landlords', App\Http\Controllers\Admin\LandlordController::class);
+});
+
+Route::get('dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('dashboard')->middleware(['auth', 'isAdmin'])->prefix('admin');
+Route::get('listings', [App\Http\Controllers\Admin\AdminController::class, 'listings'])->name('admin.listings')->middleware(['auth', 'isAdmin'])->prefix('admin');
+
 
 require __DIR__.'/auth.php';

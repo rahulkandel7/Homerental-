@@ -42,7 +42,7 @@
                                 Rs {{$listing->price}} <span class="text-gray-500">/ Month</span>
                             </p>
                             <p class="px-5 text-sm text-gray-500">
-                                Flat
+                                {{$listing->type}}
                             </p>
                             <p class="px-5 text-sm text-gray-500 pt-1">
                                 <i class="fas fa-map-marker-alt"></i> {{$listing->tole}}, {{$listing->municipality}} 

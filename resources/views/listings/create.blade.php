@@ -218,6 +218,16 @@
                         </div>
                         
                     </div>
+
+                    <div class="my-3">
+                        <label for="type" class="block text-primary font-semibold mb-2">
+                            Property Type
+                        </label>
+                        <select name="type" id="type" class="sm:w-auto border-0 focus:ring-primary shadow-md rounded-md my-2">
+                            <option value="Room">Room</option>
+                            <option value="Flat">Flat</option>
+                        </select>
+                    </div>
                     
                     <div class="my-3">
                         <label for="info" class="block text-primary font-semibold mb-2">

@@ -50,7 +50,7 @@
 
         <nav class=" flex flex-wrap items-center justify-between w-11/12 mx-auto py-4 md:py-0 px-4 text-lg text-gray-700 ">
             <div class="mt-2">
-                <a href="#">
+                <a href="{{ route('home') }}">
                     <img src="{{asset('images/LOGO.svg')}}" class="w-24">
                 </a>
             </div>
@@ -153,6 +153,18 @@
                         >Blogs</a
                     >
                     </li>
+
+                    @if (Auth::user()->type=="admin")
+                        <li>
+                            <a
+                                class="md:p-4 py-2 block hover:text-primary {{  request()->routeIs('dashboard') ? 'text-primary font-semibold' : 'text-teritory' }}"
+                                href="{{ route('dashboard') }}"
+                                >Dashboard</a
+                            >
+                            </li>
+                    @endif
+                    
+
                     {{-- <li>
                         <a class="border-secondary md:px-4 md:py-1 py-1 block md:mt-3 text-sm border rounded-full hover:border-0 hover:bg-secondary hover:text-white text-center">For Landlord</a>
                     </li> --}}

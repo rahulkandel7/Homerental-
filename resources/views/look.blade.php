@@ -64,7 +64,7 @@
         </div>
 
         <h2 class="text-primary font-bold text-2xl py-2 mt-4">
-            Rs {{$listing->price}} <span class="text-gray-500 font-semibold">/ Month</span>
+            Rs {{$listing->price}} <span class="text-gray-500 font-semibold">/ Month</span> <span class="text-xl">+ (One Time Charge: Rs {{0.1 * $listing->price}})</span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2">

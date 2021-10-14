@@ -25,7 +25,7 @@ class CreateListingsTable extends Migration
             $table->string('psphoto')->nullable();
             $table->string('froom')->nullable();
             $table->string('sroom')->nullable();
-            // $table->string('avaibilitytime');
+            $table->string('type');
             $table->longText('info');
             $table->longText('rules');
             $table->boolean('isNegotiable')->default(false);

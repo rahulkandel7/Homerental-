@@ -20,7 +20,7 @@ class Listing extends Model
         'psphoto',
         'froom',
         'sroom',
-        // 'avaibilitytime',
+        'type',
         'info',
         'rules',
         'isNegotiable',

@@ -59,6 +59,7 @@ class ListingController extends Controller
             'age_range' => 'required',
             'tenant_type' => 'required',
             'gender' => 'required',
+            'type' => 'required',
         ]);
 
         $data['user_id'] = Auth::user()->id;
@@ -180,12 +181,13 @@ class ListingController extends Controller
             'age_range' => 'required',
             'tenant_type' => 'required',
             'gender' => 'required',
+            'type' => 'required',
         ]);
 
         $data['user_id'] = Auth::user()->id;
 
         $data['isNegotiable'] = $request->isNegotiable == '0' ? false : true;
-        $data['isAvailable'] = $request->isNegotiable == '0' ? false : true;
+        $data['isAvailable'] = $request->isAvailable == '0' ? false : true;
 
         if($request->hasFile('tbphoto')){
             $fname = Str::random(20);

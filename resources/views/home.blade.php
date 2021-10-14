@@ -13,12 +13,12 @@
 
 @section('main')
     @if (Session::has('sucess'))
-        <div class="w-6/12 rounded-lg absolute right-0 bg-green-600 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
+        <div class="w-6/12 rounded-lg absolute right-0 top-4 bg-green-600 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
             {{ Session::get('sucess') }}
         </div>
     @endif
     @if (Session::has('delete'))
-        <div class="w-6/12 rounded-lg absolute right-0 bg-red-600 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
+        <div class="w-6/12 rounded-lg absolute right-0 top-4 bg-red-600 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
             {{ Session::get('delete') }}
         </div>
     @endif
@@ -345,7 +345,7 @@
     <script type="text/javascript">
             $(function(){
             setTimeout(function(){
-                $(".hidee").fadeOut(1500);}, 5000);
+                $(".hidee").fadeOut(1000);}, 4000);
             });
     </script>
 
