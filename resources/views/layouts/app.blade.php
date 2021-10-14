@@ -180,7 +180,7 @@
                                     x-transition:leave-end="opacity-0 transform scale-90"
                                     >
                                     <li>
-                                      <a class="rounded-t hover:bg-gray-100 {{ request()->routeIs('tfaq') ? 'bg-gray-100' : 'bg-white' }} text-primary py-2 px-4 block whitespace-no-wrap" href="{{ route('tfaq') }}" >
+                                      <a class="rounded-t hover:bg-gray-100 {{ request()->routeIs('users.edit') ? 'bg-gray-100' : 'bg-white' }} text-primary py-2 px-4 block whitespace-no-wrap" href="{{ route('users.edit',Auth::user()->id) }}" >
                                           <p class="font-semibold text-primary">
                                             <i class="fas fa-user mr-2"></i> Profile
                                           </p>

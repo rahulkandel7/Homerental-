@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration
             $table->boolean('agreement')->default(false);
             $table->string('address');
             $table->string('type');
+            $table->longText('bio')->nullable();
+            $table->string('gender');
             $table->rememberToken();
             $table->timestamps();
         });

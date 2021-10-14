@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Listing;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -35,7 +36,7 @@ class FrontendController extends Controller
     public function search(Request $request)
     {
         $search = $request->search;
-        $listings = Listing::where('tole','LIKE', "%{$search}%")->orWhere('municipality','LIKE', "%{$search}%")->paginate(1);
+        $listings = Listing::where('tole','LIKE', "%{$search}%")->orWhere('municipality','LIKE', "%{$search}%")->paginate(20);
         return view('search',compact('listings'));
     }
 
@@ -44,5 +45,11 @@ class FrontendController extends Controller
     
         $listing = Listing::find($id);
         return view('look',compact('listing'));
+    }
+    public function profile($id)
+    {
+        $user = User::find($id);
+        $listings = Listing::where('user_id' , '=', "{$id}")->paginate(10);
+        return view('profile',compact('user', 'listings'));
     }
 }

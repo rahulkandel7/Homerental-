@@ -26,6 +26,8 @@ class User extends Authenticatable
         'agreement',
         'address',
         'type',
+        'bio',
+        'gender',
     ];
 
     /**

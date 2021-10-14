@@ -79,7 +79,9 @@
                     <div>
                         <div class="flex justify-center">
                             <div class="w-32 h-32 rounded-full">
-                                <img src="/storage/{{$listing->user->photo}}" class="rounded-full w-32 h-32">
+                                <a href="{{ route('profile', $listing->user->id) }}">
+                                    <img src="/storage/{{$listing->user->photo}}" class="rounded-full w-32 h-32">
+                                </a>
                             </div>
                         </div>
 
@@ -90,7 +92,7 @@
 
                         <a href="tel:+977981529300" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Contact Now</a> 
 
-                        @if (Auth::user()->type == "landlord")
+                        @if (Auth::user()->id == $listing->id)
                             <a href="{{ route('listings.edit',$listing->id) }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Edit Now</a>
                             <form action="{{ route('listings.destroy',$listing->id) }}" method="post" class="inline-block">
                                 @csrf

@@ -122,6 +122,19 @@
                     @enderror
                 </div>
 
+                <!-- Gender -->
+                <div class="my-3">
+                    <label for="gender" class="block text-primary font-semibold mb-2">
+                       Select Gender
+                    </label>
+                    <select name="gender" id="gender" class="border-0 focus:ring-primary shadow-md rounded-md @if ($errors->has('gender'))
+                        border-red-500 border-b-2 focus:border-primary
+                    @endif">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
                 <!-- Photo -->
                 <div class="my-3">
                     <label for="photo" class="block text-primary font-semibold mb-2">
@@ -140,7 +153,9 @@
 
                 <!-- Tenant/Landlord -->
                 <div class="my-3">
-                    <label for="type" class="block text-primary font-semibold mb-2">
+                    <label for="type" class="block text-primary font-semibold mb-2 @if ($errors->has('type'))
+                        border-red-500 border-b-2 focus:border-primary
+                    @endif">
                        I am a 
                     </label>
                     <select name="type" id="type" class="border-0 focus:ring-primary shadow-md rounded-md">
