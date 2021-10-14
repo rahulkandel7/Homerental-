@@ -14,7 +14,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2">
 
             <!-- Book Home -->
-                <div class="px-5">
+                <div class="px-5 wow fadeInLeft" data-wow-delay="2s">
                     <h2 class="font-bold text-primary text-xl">
                         Book your new home from home
                     </h2>
@@ -27,17 +27,17 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight" data-wow-delay="2s">
                     <img src="{{asset('images/tenant/book.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Book Home Close -->
 
             <!-- Search fast -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft" data-wow-delay="2s">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
-                <div class="px-5">
+                <div class="px-5 wow fadeInRight" data-wow-delay="2s">
                     <h2 class="font-bold text-primary text-xl">
                         Search fast, search smart
                     </h2>
@@ -52,7 +52,7 @@
             <!-- Search fast close -->
 
             <!-- Real Feel -->
-                <div class="px-5">
+                <div class="px-5 wow fadeInLeft">
                     <h2 class="font-bold text-primary text-xl">
                         Get a real feel for the place
                     </h2>
@@ -65,17 +65,17 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight">
                     <img src="{{asset('images/tenant/real.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Real Feel Close -->
 
             <!-- Safe -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
-                <div class="px-5">
+                <div class="px-5 wow fadeInRight">
                     <h2 class="font-bold text-primary text-xl">
                         Geniune Landlords
                     </h2>

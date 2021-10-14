@@ -42,9 +42,13 @@ class RegisteredUserController extends Controller
             'phone' => ['required','digits:10'],
             'address'=>'required',
             'agreement' => 'required|boolean',
-            'type' => 'required',
+            'type' => ['required', 'in:tenant,landlord'],
         ]); 
 
+
+        // if($data['type'] != 'tenant' || $data['type'] != 'landlord'){
+        //     return abort(404);
+        // }
         
 
         if($request->hasFile('photo')){

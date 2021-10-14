@@ -54,7 +54,7 @@
     <!-- Hero Section Close -->
 
     <!-- Our Services Start -->
-        <div class="w-11/12 mx-auto my-10">
+        <div class="w-11/12 mx-auto my-10 wow bounceInUp" data-wow-delay="2s">
             <h2 class="text-primary text-4xl text-center font-bold">
                 Our Services
             </h2>
@@ -114,13 +114,13 @@
     <!-- Our Services Close -->
 
     <!-- Info About US-->
-        <div class="w-11/12 mx-auto">
+        <div class="w-11/12 mx-auto" >
             <div class="grid md:grid-cols-2 grid-cols-1">
-                <div class="mb-3">
+                <div class="mb-3 wow fadeInUp" data-wow-delay=".5s">
                     <img src="{{asset('images/bg.webp')}}" class="rounded-lg">
                 </div>
 
-                <div class="px-10">
+                <div class="px-10 wow fadeInDown" data-wow-delay=".5s">
                     <h2 class="md:text-3xl text-2xl max-w-md font-semibold text-teritory" style="font-family: 'Poppins', serif;">
                         It's Easier Than Ever to Find a Home with <span class="text-primary font-bold">Homie Nepal</span>
                     </h2>
@@ -142,7 +142,7 @@
     <!-- Info Close -->
 
     <!-- Our Testonomials Start -->
-        <div class="w-11/12 mx-auto my-10">
+        <div class="w-11/12 mx-auto my-10 wow bounceInUp">
             <h2 class="text-primary text-4xl text-center font-bold">
                 Our Testonomials
             </h2>
@@ -247,7 +247,7 @@
 
             <div class="flex flex-wrap justify-start mt-5">
 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-lg mt-2">
                         Here will be Title
@@ -260,7 +260,7 @@
                     </p>
                 </div>
 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-xl mt-2">
                         Here will be Title
@@ -274,7 +274,7 @@
                 </div>
                 
 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-xl mt-2">
                         Here will be Title
@@ -288,7 +288,7 @@
                 </div>
                 
 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-xl mt-2">
                         Here will be Title
@@ -301,7 +301,7 @@
                     </p>
                 </div>
                 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-xl mt-2">
                         Here will be Title
@@ -314,7 +314,7 @@
                     </p>
                 </div>
                 
-                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
+                <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service wow fadeInUp">
                     <img src="{{asset('images/background/hero.png')}}" alt="">
                     <p class="text-black font-bold text-xl mt-2">
                         Here will be Title
@@ -330,7 +330,7 @@
 
             </div>
 
-            <div class="flex justify-center items-center mt-5">
+            <div class="flex justify-center items-center mt-5 wow bounceInUp">
                 <a href="" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary shadow hover:shadow-md">View More</a>
             </div>
 

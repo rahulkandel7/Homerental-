@@ -23,6 +23,9 @@
 
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 
+        <!-- Wow css -->
+        <link rel="stylesheet" href="{{ asset('css/wow/animate.css') }}">
+
         @yield('css')
 
         <style>
@@ -30,7 +33,7 @@
                 position:fixed;
                 width: 100%;
                 height: 100vh;
-                background: rgb(253, 246, 246);
+                background: rgb(249, 250, 251);
                 z-index: 9999999;
             }
         </style>
@@ -257,8 +260,8 @@
                 <div class="w-11/12 grid mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
                     <div class="py-4">
                         <div class="lg:flex lg:justify-center lg:items-center">
-                            <div class=" rounded-lg bg-white p-2 w-20 md:w-auto ">
-                                <img src="{{asset('images/LOGO.svg')}}" class="md:w-full">
+                            <div class=" rounded-lg bg-white p-2 w-20  ">
+                                <img src="{{asset('images/LOGO.svg')}}" class="md:w-20">
                             </div>
                         </div>
                         <p class="text-gray-300 text-sm pt-2 lg:text-center">
@@ -336,7 +339,7 @@
         <script>
             setTimeout('document.getElementById("loading").style.display="none"', 2000);  // 2 seconds
         </script>
-    <script>
+        <script>
         const button = document.querySelector('#menu-button');
         const menu = document.querySelector('.menu');
 
@@ -344,6 +347,25 @@
         button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
         });
+    </script>
+
+    <!-- Wow js -->
+    <script src="{{ asset('js/wow/wow.min.js') }}"></script>
+
+    <script>
+
+        wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset:       0,
+            callback:     function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        }
+        );
+        wow.init();
+        
+    
     </script>
 
     </body>

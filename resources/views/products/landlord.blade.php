@@ -14,7 +14,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2">
 
             <!-- Cast Home -->
-                <div class="px-5">
+                <div class="px-5 wow fadeInLeft" data-wow-delay="2s">
                     <h2 class="font-bold text-primary text-xl">
                         Spread a large net
                     </h2>
@@ -26,17 +26,17 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight" data-wow-delay="2s">
                     <img src="{{asset('images/tenant/book.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Cast Home Close -->
 
             <!-- Control -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft" data-wow-delay="2s">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
-                <div class="px-5">
+                <div class="px-5 wow fadeInRight" data-wow-delay="2s">
                     <h2 class="font-bold text-primary text-xl">
                         100% control over the rental provide
                     </h2>
@@ -50,7 +50,7 @@
             <!-- Control close -->
 
             <!-- Meet  -->
-                <div class="px-5">
+                <div class="px-5 wow fadeInLeft">
                     <h2 class="font-bold text-primary text-xl">
                         Find your match rental
                     </h2>
@@ -62,17 +62,17 @@
                     </p>
                 </div>
 
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:ml-10 flex justify-center place-self-center wow fadeInRight">
                     <img src="{{asset('images/tenant/real.webp')}}" class="h-52 mt-5">
                 </div>
             <!-- Meet Close -->
 
             <!-- Tenant -->
-                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center">
+                <div class="w-full  h-64 bg-gray-100 shadow-2xl mb-10 md:mb-32 md:mr-10 flex justify-center place-self-center wow fadeInLeft">
                     <img src="{{asset('images/tenant/search.webp')}}" class="h-52 mt-5">
                 </div>
 
-                <div class="px-5">
+                <div class="px-5 wow fadeInRight">
                     <h2 class="font-bold text-primary text-xl">
                         Remote tenant selection to save you time
                     </h2>
