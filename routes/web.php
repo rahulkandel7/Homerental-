@@ -71,6 +71,6 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/create-symlink', function (){
-    symlink(storage_path('/app/public'), public_path('storage'));
+    symlink(storage_path('/app/public'), public_path('../../public_html/storage'));
     echo "Symlink Created. Thanks";
 });
