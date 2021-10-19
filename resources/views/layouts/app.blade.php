@@ -194,7 +194,7 @@
                         <li x-data="{isOpen:false}">
                             <div class=" inline-block relative ">
                                 <p class="md:p-4 py-2 block text-xl" @click="isOpen= !isOpen" @click.away = "isOpen= false">
-                                    <img src="{{asset('storage/').Auth::user()->photo}}" class="w-12 h-12 rounded-full">
+                                    <img src="storage/{{Auth::user()->photo}}" class="w-12 h-12 rounded-full">
                                 </p>
                                 <ul class=" absolute text-gray-700 pt-1 shadow-lg w-56 md:right-1" x-show="isOpen" 
                                     x-transition:enter="transition ease-out duration-300"
