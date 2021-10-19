@@ -52,4 +52,23 @@ class FrontendController extends Controller
         $listings = Listing::where('user_id' , '=', "{$id}")->paginate(10);
         return view('profile',compact('user', 'listings'));
     }
+
+    public function howtorent()
+    {
+        return view('howtorent');
+    }
+
+    public function howtorentout()
+    {
+        return view('howtorentout');
+    }
+    public function howwork()
+    {
+        return view('work');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

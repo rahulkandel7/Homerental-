@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Call;
 use Illuminate\Http\Request;
 
-class LandlordController extends Controller
+class CallController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class LandlordController extends Controller
      */
     public function index()
     {
-        $t_landlords =  User::where('type' , '=', 'landlord')->count();
-        $landlords = User::where('type' , '=', 'landlord')->paginate(15);
-        return view('admin.landlords.index', compact('landlords', 't_landlords'));
+        $calls = Call::paginate(10);
+        $pendings = Call::where('status', '=', 'pending')->get(); 
+        return view('admin.calls.index', compact('calls', 'pendings'));
     }
 
     /**
@@ -44,10 +44,10 @@ class LandlordController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Call  $call
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Call $call)
     {
         //
     }
@@ -55,33 +55,42 @@ class LandlordController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Call  $call
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Call $call)
     {
-        //
+        return view('admin.calls.edit', compact('call'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Call  $call
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Call $call)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'status' => 'nullable',
+            'user_id' => 'required',
+        ]);
+
+        $call->update($data);
+
+        return redirect(route('admin.calls.index'))->with('sucess', 'Call has been updated');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Call  $call
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Call $call)
     {
         //
     }

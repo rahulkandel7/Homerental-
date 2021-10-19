@@ -36,6 +36,13 @@
                 background: rgb(249, 250, 251);
                 z-index: 9999999;
             }
+            .facebook:hover{
+                color:#4267B2;
+            }
+
+            .instagram:hover{
+                color:#8a3ab9;
+            }
         </style>
 
 
@@ -154,15 +161,18 @@
                     >
                     </li>
 
-                    @if (Auth::user()->type=="admin")
-                        <li>
-                            <a
-                                class="md:p-4 py-2 block hover:text-primary {{  request()->routeIs('dashboard') ? 'text-primary font-semibold' : 'text-teritory' }}"
-                                href="{{ route('dashboard') }}"
-                                >Dashboard</a
-                            >
-                            </li>
-                    @endif
+                    @auth
+                        @if(Auth::user()->type == 'admin')
+                        
+                            <li>
+                                <a
+                                    class="md:p-4 py-2 block hover:text-primary {{  request()->routeIs('dashboard') ? 'text-primary font-semibold' : 'text-teritory' }}"
+                                    href="{{ route('dashboard') }}"
+                                    >Dashboard</a
+                                >
+                                </li>
+                        @endif
+                    @endauth
                     
 
                     {{-- <li>
@@ -228,7 +238,7 @@
                                     </li> --}}
 
                                     <li class="cursor-pointer">
-                                        <a class="rounded-b hover:bg-gray-100 {{ request()->routeIs('tfaq') ? 'bg-gray-100' : 'bg-white' }} text-primary py-2 px-4 block whitespace-no-wrap" href="{{ route('tfaq') }}" >
+                                        <a class="rounded-b hover:bg-gray-100 {{ request()->routeIs('logout') ? 'bg-gray-100' : 'bg-white' }} text-primary py-2 px-4 block whitespace-no-wrap"  >
                                             <p class="font-semibold text-primary">
                                                 <form action="{{ route('logout') }}" method="POST" class="inline-block">
                                                     @csrf
@@ -280,7 +290,7 @@
                             Gaindakot-2, Nawalpur
                         </p>
                         <p class="text-gray-300 text-sm pt-1 lg:text-center">
-                            +977-9815209300
+                            +977-9809247422
                         </p>
                         <p class="text-gray-300 text-sm pt-1 lg:text-center">
                             homienepal@gmail.com
@@ -296,6 +306,9 @@
                             <li class="mt-2">
                                 <a href="" class="hover:text-secondary">Terms & Conditions</a>
                             </li>
+                            <li class="mt-2">
+                                <a href="{{ route('work') }}" class="hover:text-secondary">How Homie Nepal Work</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -303,7 +316,7 @@
                         <h3 class="text-white font-extrabold text-xl mt-2">Tenant</h3>
                         <ul class="text-white font-light text-sm mt-3">
                             <li>
-                                <a href="{{ route('tenant') }}" class="hover:text-secondary">How To Rent</a>
+                                <a href="{{ route('howtorent') }}" class="hover:text-secondary">How To Rent</a>
                             </li>
                             <li class="mt-2">
                                 <a href="{{ route('tfaq') }}" class="hover:text-secondary">FAQ's</a>
@@ -318,7 +331,7 @@
                         <h3 class="text-white font-extrabold text-xl mt-2">LandLord</h3>
                         <ul class="text-white font-light text-sm mt-3">
                             <li>
-                                <a href="{{ route('landlord') }}" class="hover:text-secondary">How To Rent Out</a>
+                                <a href="{{ route('howtorentout') }}" class="hover:text-secondary">How To Rent Out</a>
                             </li>
                             <li class="mt-2">
                                 <a href="{{ route('lfaq') }}" class="hover:text-secondary">FAQ's</a>
@@ -333,7 +346,13 @@
                         <h3 class="text-white font-extrabold text-xl mt-2">Support</h3>
                         <ul class="text-white font-light text-sm mt-3">
                             <li class="mt-2">
-                                <a href="" class="hover:text-secondary">Contact Us</a>
+                                <a href="{{ route('contact') }}" class="hover:text-secondary">Contact Us</a>
+                            </li>
+
+                            <li class="text-xl">
+                                <a href="https://www.facebook.com/homienepal"><i class="fab fa-facebook mt-3  facebook"></i></a>
+
+                                <a href="https://www.instagram.com/homienepal"><i class="fab fa-instagram mt-3 ml-3 instagram"></i></a>
                             </li>
                             
                         </ul>

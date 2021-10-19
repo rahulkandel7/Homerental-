@@ -13,22 +13,22 @@
 
 @section('main')
     <div class="w-11/12 mx-auto">
+        @if (Session::has('sucess'))
+        <div class="w-6/12 rounded-lg absolute right-0 top-4 bg-green-600 z-50 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
+            {{ Session::get('sucess') }}
+        </div>
+        @endif
         <div>
-            @if (Session::has('delete'))
-            <div class="w-6/12 rounded-lg absolute right-0 top-4 z-50 bg-red-600 text-white px-3 py-2 wow fadeIn hidee" data-wow-delay="2s">
-                {{ Session::get('delete') }}
-            </div>
-            @endif
             <h2 class="text-primary font-bold text-2xl py-2">
-                Tenants
+                Call Requested
             </h2>
 
             <div class="w-44 h-32 shadow-lg hover:shadow rounded-lg service mt-5">
                 <p class="text-primary font-bold text-lg px-5 py-2">
-                    No. Of Tenants
+                    Pending Calls
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($tenants)}}
+                    {{count($pendings)}}
                 </p>
             </div>
 
@@ -40,54 +40,66 @@
                     <td class="text-gray-600 font-semibold px-5 border">
                         Name
                     </td>
-                    <td class="text-gray-600 font-semibold px-5 border w-32">
-                        Email Address
-                    </td>
+                    
                     <td class="text-gray-600 font-semibold px-5 border w-32">
                         Phone Number
                     </td>
                     <td class="text-gray-600 font-semibold px-5 border w-32">
-                        Action
+                        Status
+                    </td>
+                    <td class="text-gray-600 font-semibold px-5 border w-32">
+                        User ID
+                    </td>
+                    <td class="text-gray-600 font-semibold px-5 border w-32">
+                        Date
+                    </td>
+                    <td class="text-gray-600 font-semibold px-5 border w-32">
+                        Actions
                     </td>
                 </tr>
     
-                @foreach ($tenants as $tenant)
+                @foreach ($calls as $call)
                     <tr>
                         <td class="text-primary px-5 border w-32">
-                            {{$tenant->id}}
+                            {{$call->id}}
                         </td>
                         <td class="text-primary px-5 border">
-                            <a href="{{ route('profile',$tenant->id)}}" class="cursor-pointer">
-                                {{$tenant->name}}
+                            <a href="{{ route('profile', $call->user_id) }}" class="cursor-pointer">
+                                {{$call->name}}
                             </a>
+
                         </td>
-                        <td class="text-primary px-5 border">
-                            {{$tenant->email}}
+                        <td class="text-primary px-5 border w-32">
+                            {{$call->phone}}
                         </td>
-                        <td class="text-primary px-5 border">
-                            {{$tenant->phone}}
+                        <td class=" px-5 border w-32 @if($call->status == 'pending') bg-red-500 text-white @else bg-green-400 text-white @endif uppercase">
+                            {{$call->status}}
+                        </td>
+                        <td class="text-primary px-5 border w-32">
+                            {{$call->user_id}}
+                        </td>
+                        <td class="text-primary px-5 border w-32">
+                            {{\Carbon\Carbon::parse($call->created_at)->diffForHumans()}}
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
-                            <form action="{{route('users.destroy',$tenant->id)}}" method="post" class="inline-block">
-                                @csrf
-                                @method('delete')
-                                <button type="submit">
-                                    <i class="fas fa-trash hover:text-red-500 font-bold cursor-pointer text-xl ml-3"></i>
-                                </button>
-                            </form>
+                            <a href="{{ route('admin.calls.edit', $call->id) }}"><i class="fas fa-edit hover:text-primary font-bold cursor-pointer text-xl"></i></a>
+                            
                         </td>
                     </tr>
     
                 @endforeach
     
             </table>
+
             <div class="mt-5">
-                {{$tenants->links()}}
+            {{$calls->links()}}
+
             </div>
         </div>
+
+        
     </div>
 @endsection
-
 
 @section('js')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

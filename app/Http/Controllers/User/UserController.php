@@ -81,7 +81,10 @@ class UserController extends Controller
             'phone' => ['nullable','digits:10'],
             'address'=>'nullable',
             'bio' => 'nullable',
+            'isVerified' => 'nullable',
         ]); 
+
+        $data['isVerified'] == "1" ? true : false;
 
         if($request->hasFile('photo')){
             $fname = Str::random(20);
@@ -112,6 +115,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        Storage::delete('public/'.$user->photo);
+        $user->delete();
+        return redirect(route('admin.landlords.index'))->with('delete', 'User deleted Sucessfully');
     }
 }

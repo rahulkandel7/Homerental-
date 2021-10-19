@@ -19,7 +19,7 @@
                     No. Of Tenants
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($tenants)}}
+                    {{$t_tenants}}
                 </p>
             </div>
 
@@ -28,7 +28,7 @@
                     No. Of Landlords
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($landlords)}}
+                    {{$t_landlords}}
                 </p>
             </div>
 
@@ -37,7 +37,7 @@
                     No. Of Listings
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($listings)}}
+                    {{$t_listings}}
                 </p>
             </div>
 
@@ -46,12 +46,12 @@
                     No. Of Blogs
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($blogs)}}
+                    {{$t_blogs}}
                 </p>
             </div>
         </div>
 
-        <div class="mt-5">
+        <div class="mt-5 ">
             <h2 class="text-primary font-bold text-2xl py-2">
                 Latest Tenants
             </h2>
@@ -92,7 +92,7 @@
                             {{$tenant->phone}}
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
-                            <form action="{{route('admin.tenants.destroy',$tenant->id)}}" method="post" class="inline-block">
+                            <form action="{{route('users.destroy',$tenant->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
                                 <button type="submit">
@@ -105,7 +105,9 @@
                 @endforeach
     
             </table>
-            {{$tenants->links()}}
+            <div class="mt-5">
+                {{$tenants->links()}}
+            </div>
         </div>
 
         <div class="mt-5">
@@ -155,7 +157,7 @@
                             {{$landlord->address}}
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
-                            <form action="{{route('admin.landlords.destroy',$landlord->id)}}" method="post" class="inline-block">
+                            <form action="{{route('users.destroy',$landlord->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
                                 <button type="submit">
@@ -168,7 +170,9 @@
                 @endforeach
     
             </table>
-            {{$landlords->links()}}
+            <div class="mt-5">
+                {{$landlords->links()}}
+            </div>
         </div>
 
         <div class="mt-5">
@@ -216,7 +220,9 @@
                 @endforeach
     
             </table>
-            {{$blogs->links()}}
+            <div class="mt-5">
+                {{$blogs->links()}}
+            </div>
         </div>
 
     </div>

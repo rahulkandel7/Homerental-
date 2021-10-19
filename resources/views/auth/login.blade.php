@@ -68,9 +68,8 @@
                         </a>
                     @endif
             
-                    <x-button class="ml-3 px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
-                        {{ __('Log in') }}
-                    </x-button>
+                    <input type="submit" value="Log in" class="ml-3 px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
+
                 </div>
             </form>  
         </div>  

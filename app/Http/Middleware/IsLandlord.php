@@ -17,9 +17,10 @@ class IsLandlord
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->type != 'landlord'){
-            return redirect(route('home'));
+        if(Auth::user()->type == 'landlord' || Auth::user()->type =='admin'){
+            return $next($request);
         }
-        return $next($request);
+        return redirect(route('home'));
+
     }
 }

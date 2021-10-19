@@ -23,7 +23,7 @@
                     No. Of Listings
                 </p>
                 <p class="text-primary text-right font-bold text-lg px-5 py-2">
-                    {{count($listings)}}
+                    {{$t_listings}}
                 </p>
             </div>
 
@@ -42,6 +42,9 @@
                         Price
                     </td>
                     <td class="text-gray-600 font-semibold px-5 border w-32">
+                        Posted By
+                    </td>
+                    <td class="text-gray-600 font-semibold px-5 border w-32">
                         Action
                     </td>
                 </tr>
@@ -57,12 +60,17 @@
                             </a>
                         </td>
                         <td class="text-primary px-5 border">
-                            {{$listing->isAvailable}}
+                        
+                            {{$listing->isAvailable== '1' ? 'Yes' : 'No'}}
                         </td>
                         <td class="text-primary px-5 border">
                             {{$listing->price}}
                         </td>
+                        <td class="text-primary px-5 border">
+                            {{$listing->user_id}}
+                        </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
+                            <a href="{{ route('listings.edit', $listing->id) }}"><i class="fas fa-edit hover:text-primary font-bold cursor-pointer text-xl"></i></a>
                             <form action="{{route('listings.destroy',$listing->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
@@ -76,7 +84,9 @@
                 @endforeach
     
             </table>
-            {{$listings->links()}}
+            <div class="mt-5">
+                {{$listings->links()}}
+            </div>
         </div>
     </div>
 @endsection

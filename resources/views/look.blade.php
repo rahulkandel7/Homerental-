@@ -86,11 +86,22 @@
                         </div>
 
                         <p class="text-center text-primary font-semibold text-xl my-2">
-                            {{ $listing->user->name }} <span class="text-primary ml-1 text-base"><i class="fas fa-check-circle"></i></span>
+                            {{ $listing->user->name }} 
+                            @if ($listing->user->isVerified == "1")
+                                <span class="text-primary ml-1 text-base"><i class="fas fa-check-circle"></i></span>
+                                
+                            @endif
 
                         </p>
 
-                        <a href="tel:+977981529300" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Contact Now</a> 
+                        <a href="tel:+977981529300" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Make a Call</a> 
+
+                        <form id="getcall" class="inline-block">
+                            <input type="submit" value="Get a Call" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary cursor-pointer">
+                        </form>
+                        <div class="w-6/12 rounded-lg absolute hidden right-0 top-4 bg-green-600 text-white px-3 py-2 wow fadeIn hidee" >
+                            You will get a call soon
+                        </div>
 
                         @if (Auth::user()->id == $listing->id)
                             <a href="{{ route('listings.edit',$listing->id) }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Edit Now</a>
@@ -99,6 +110,7 @@
                                 @method('delete')
                                 <input type="submit" value="Delete" class="px-4 py-1 bg-red-600 text-white border-2 rounded-lg border-red-600 hover:bg-transparent hover:text-red-600 cursor-pointer">
                             </form>
+                            
                         @endif
 
                         
@@ -145,4 +157,36 @@
 @section('js')
     <script src="{{asset('js/lightbox/lightbox.min.js')}}"></script>
     <script src="{{asset('js/lightbox/lightbox-plus-jquery.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <script type="text/javascript">
+        $('#getcall').on('submit',function(e){
+            e.preventDefault();
+
+            let name = "{{Auth::user()->name}}";
+            let phone = "{{Auth::user()->phone}}";
+            let user_id = {{Auth::user()->id}};
+
+            $.ajax({
+                url: "{{route('calls.store')}}",
+                type:"POST",
+                data:{
+                    "_token": "{{ csrf_token() }}",
+                    name:name,
+                    phone:phone,
+                    user_id:user_id,
+                },
+                success:function(response) { 
+                    $('.hidee').removeClass('hidden');
+                    setTimeout(function(){
+                        $(".hidee").fadeOut(1000);
+                    }, 3000);
+                    setTimeout(function(){
+                        location.reload();
+                    }, 4000);
+                }
+            });
+        });
+    </script>
 @endsection

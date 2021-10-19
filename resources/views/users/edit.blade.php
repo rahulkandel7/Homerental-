@@ -19,7 +19,7 @@
             <img src="/storage/{{$user->photo}}" class="w-32 rounded-full">
         </div>
         
-        <div class="md:flex md:justify-center mx-3 md:mx-0">
+        <div class="md:flex md:justify-center mx-3  px-5 md:mx-0">
             <form method="POST" action="{{ route('users.update',$user->id) }}" class="my-2" enctype="multipart/form-data">
                 @csrf
                 @method('put')
@@ -43,6 +43,22 @@
                     </p>
                     
                 </div>
+
+                @if (Auth::user()->type == "admin")
+                    <!-- Is Verified -->
+                    <div class="my-3">
+                        <label for="isVerified" class="block text-primary font-semibold mb-2">
+                        Is Verified
+                        </label>
+                        <select name="isVerified" id="isVerified" class="border-0 focus:ring-primary shadow-md rounded-md @if ($errors->has('isVerified'))
+                            border-red-500 border-b-2 focus:border-primary
+                        @endif">
+                            <option value="1" @if($user->isVerified == "1") selected @endif>Yes</option>
+                            <option value="0" @if($user->isVerified == "0") selected @endif>No</option>
+                        </select>
+                    </div>
+                @endif
+                
 
                 <div class="md:flex">
                     <!-- Full NAme -->

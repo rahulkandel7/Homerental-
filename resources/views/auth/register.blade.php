@@ -184,9 +184,8 @@
             
                 <div class="flex items-center justify-center mt-4">
             
-                    <x-button class="ml-3 px-30 mb-4 md:mb-0 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
-                        {{ __('Register') }}
-                    </x-button>
+                    <input type="submit" value="Register" class="ml-3 px-30 mb-4 md:mb-0 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
+                        
                 </div>
             </form>  
         </div>  

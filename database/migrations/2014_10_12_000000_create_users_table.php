@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('type');
             $table->longText('bio')->nullable();
             $table->string('gender');
+            $table->boolean('isVerified')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

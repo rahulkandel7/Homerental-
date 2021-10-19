@@ -81,7 +81,7 @@
         </div>
 
         <div class="fixed bottom-3 right-7">
-            <div class="bg-primary w-14 h-14 rounded-full bg-primary text-white text-lg">
+            <div class=" w-14 h-14 rounded-full bg-primary text-white text-lg">
                 <div class="flex justify-center pt-4">
                     <a href="{{ route('admin.blogs.create') }}">
                         <i class="fas fa-plus"></i>
