@@ -68,3 +68,9 @@ Route::get('messages', [App\Http\Controllers\Admin\AdminController::class, 'mess
 
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/create-symlink', function (){
+    symlink(storage_path('/app/public'), public_path('storage'));
+    echo "Symlink Created. Thanks";
+});
