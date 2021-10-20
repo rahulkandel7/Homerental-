@@ -14,7 +14,7 @@
             @if ($listing->tbphoto)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->tbphoto}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->tbphoto}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->tbphoto}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
@@ -22,7 +22,7 @@
             @if ($listing->hallphoto)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->hallphoto}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->hallphoto}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->hallphoto}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
@@ -30,7 +30,7 @@
             @if ($listing->kitchenphoto)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->kitchenphoto}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->kitchenphoto}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->kitchenphoto}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
@@ -38,7 +38,7 @@
             @if ($listing->psphoto)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->psphoto}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->psphoto}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->psphoto}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
@@ -46,7 +46,7 @@
             @if ($listing->froom)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->froom}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->froom}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->froom}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
@@ -54,7 +54,7 @@
             @if ($listing->sroom)
                 <div class="m-2">
                     <a href=" /storage/{{$listing->sroom}} " data-lightbox="rooms">
-                        <img src="/storage/{{$listing->sroom}}" class="rounded-lg p-2 shadow-lg w-full" >
+                        <img src="/storage/{{$listing->sroom}}" class="rounded-lg p-2 shadow-lg w-full" alt="photo1">
                     </a>
                 </div>
             @endif
