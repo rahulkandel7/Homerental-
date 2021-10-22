@@ -16,7 +16,7 @@
 <div class="md:w-10/12 mx-auto">
     <div class="shadow-lg rounded-lg h-auto w-93 my-10">
         <div class="flex justify-center">
-            <img src="/storage/{{$user->photo}}" class="w-32 rounded-full">
+            <img src="/storage/{{$user->photo}}" class="w-52 h-52 rounded-full">
         </div>
         
         <div class="md:flex md:justify-center mx-3  px-5 md:mx-0">
