@@ -55,7 +55,7 @@ return [
 
         'my' => [
             'driver' => 'local',
-            'root'   => public_path('storage/'),
+            'root'   => '/home2/homienep/public_html',
             'visibility' => 'public',
         ],
     ],
