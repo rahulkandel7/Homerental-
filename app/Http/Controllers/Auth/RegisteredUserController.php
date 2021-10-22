@@ -51,7 +51,7 @@ class RegisteredUserController extends Controller
             $fexe = $request->file('photo')->extension();
             $fpath = "$fname.$fexe";
 
-            $request->file('photo')->storeAs('public/users', $fpath); 
+            $request->file('photo')->storeAs('users', $fpath, ['disk' => 'my']); 
 
             $data['photo'] = 'users/'.$fpath;
         }
