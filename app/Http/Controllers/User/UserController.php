@@ -84,10 +84,9 @@ class UserController extends Controller
             'isVerified' => 'nullable',
         ]); 
 
-        if($data['isVerified']){
-            $data['isVerified'] == "1" ? true : false;
-
-        }
+        // if($data['isVerified']){
+        //     $data['isVerified'] == "1" ? true : false;
+        // }
 
         if($request->hasFile('photo')){
             $fname = Str::random(20);
