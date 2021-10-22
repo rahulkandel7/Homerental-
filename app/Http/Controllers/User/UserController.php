@@ -93,10 +93,10 @@ class UserController extends Controller
             $fexe = $request->file('photo')->extension();
             $fpath = "$fname.$fexe";
 
-            $request->file('photo')->storeAs('public/users', $fpath); 
+            $request->file('photo')->storeAs('users', $fpath, ['disk' => 'my']); 
 
             if($user->photo){
-                Storage::delete('public/'. $user->photo);
+                Storage::delete($user->photo, ['disk' => 'my']);
             }
 
             $data['photo'] = 'users/'.$fpath;
@@ -117,7 +117,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        Storage::delete('public/'.$user->photo);
+        Storage::delete($user->photo,['disk' => 'my']);
         $user->delete();
         return redirect(route('admin.landlords.index'))->with('delete', 'User deleted Sucessfully');
     }
