@@ -68,7 +68,7 @@
                         </a>
                     @endif
             
-                    <input type="submit" value="Log in" class="ml-3 px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
+                    <input type="submit" value="Log in" class="ml-3 px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary cursor-pointer">
 
                 </div>
             </form>  

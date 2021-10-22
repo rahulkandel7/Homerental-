@@ -184,7 +184,7 @@
             
                 <div class="flex items-center justify-center mt-4">
             
-                    <input type="submit" value="Register" class="ml-3 px-30 mb-4 md:mb-0 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
+                    <input type="submit" value="Register" class="ml-3 px-30 mb-4 md:mb-0 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary cursor-pointer">
                         
                 </div>
             </form>  
