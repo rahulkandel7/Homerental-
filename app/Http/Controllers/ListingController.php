@@ -201,7 +201,7 @@ class ListingController extends Controller
             
 
             if($listing->tbphoto){
-                Storage::delete($listing->tbphoto, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->tbphoto);
             }
 
             $data['tbphoto'] = 'listings/'.$fpath;
@@ -216,7 +216,7 @@ class ListingController extends Controller
             $request->file('hallphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->hallphoto){
-                Storage::delete($listing->hallphoto, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->hallphoto);
             }
 
             $data['hallphoto'] = 'listings/'.$fpath;
@@ -230,7 +230,7 @@ class ListingController extends Controller
             $request->file('kitchenphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->kitchenphoto){
-                Storage::delete($listing->kitchenphoto, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->kitchenphoto);
             }
 
             $data['kitchenphoto'] = 'listings/'.$fpath;
@@ -244,7 +244,7 @@ class ListingController extends Controller
             $request->file('psphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->psphoto){
-                Storage::delete($listing->psphoto, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->psphoto);
             }
 
             $data['psphoto'] = 'listings/'.$fpath;
@@ -258,7 +258,7 @@ class ListingController extends Controller
             $request->file('froom')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->froom){
-                Storage::delete($listing->froom, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->froom);
             }
 
             $data['froom'] = 'listings/'.$fpath;
@@ -273,7 +273,7 @@ class ListingController extends Controller
 
 
             if($listing->sroom){
-                Storage::delete($listing->sroom, ['disk' => 'my']);
+                Storage::disk('my')->delete($listing->sroom);
             }
 
             $data['sroom'] = 'listings/'.$fpath;
@@ -292,12 +292,12 @@ class ListingController extends Controller
      */
     public function destroy(Listing $listing)
     {
-        Storage::delete($listing->tbphoto, ['disk' => 'my']);
-        Storage::delete($listing->hallphoto, ['disk' => 'my']);
-        Storage::delete($listing->kitchenphoto, ['disk' => 'my']);
-        Storage::delete($listing->psphoto, ['disk' => 'my']);
-        Storage::delete($listing->froom, ['disk' => 'my']);
-        Storage::delete($listing->sroom, ['disk' => 'my']);
+        Storage::disk('my')->delete($listing->tbphoto);
+        Storage::disk('my')->delete($listing->hallphoto);
+        Storage::disk('my')->delete($listing->kitchenphoto);
+        Storage::disk('my')->delete($listing->psphoto);
+        Storage::disk('my')->delete($listing->froom);
+        Storage::disk('my')->delete($listing->sroom);
         $listing->delete();
 
         return redirect(route('home'))->with('delete', 'Your Lisitngs has been Deleted');
