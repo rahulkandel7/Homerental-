@@ -96,7 +96,7 @@ class UserController extends Controller
             $request->file('photo')->storeAs('users', $fpath, ['disk' => 'my']); 
 
             if($user->photo){
-                Storage::disk('my')->delete($user->photo);
+                Storage::disk('my')->delete('users/'.$user->photo);
             }
 
             $data['photo'] = 'users/'.$fpath;
