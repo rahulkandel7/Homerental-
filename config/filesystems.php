@@ -55,7 +55,7 @@ return [
 
         'my' => [
             'driver' => 'local',
-            'root'   => base_path('public_html/storage'),
+            'root'   => public_path('public_html/storage'),
             'visibility' => 'public',
         ],
     ],
