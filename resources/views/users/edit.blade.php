@@ -44,22 +44,6 @@
                     
                 </div>
 
-                @if (Auth::user()->type == "admin")
-                    <!-- Is Verified -->
-                    <div class="my-3">
-                        <label for="isVerified" class="block text-primary font-semibold mb-2">
-                        Is Verified
-                        </label>
-                        <select name="isVerified" id="isVerified" class="border-0 focus:ring-primary shadow-md rounded-md @if ($errors->has('isVerified'))
-                            border-red-500 border-b-2 focus:border-primary
-                        @endif">
-                            <option value="1" @if($user->isVerified == "1") selected @endif>Yes</option>
-                            <option value="0" @if($user->isVerified == "0") selected @endif>No</option>
-                        </select>
-                    </div>
-                @endif
-                
-
                 <div class="md:flex">
                     <!-- Full NAme -->
                     <div class="my-3">
