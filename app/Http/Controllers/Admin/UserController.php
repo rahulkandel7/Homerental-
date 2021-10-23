@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -62,12 +59,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        if($user->id == Auth::user()->id){
-            return view('users.edit', compact('user'));
-        }
-        else {
-            return abort(404);
-        }
+        return view ('admin.users.edit', compact('user'));
     }
 
     /**
@@ -80,30 +72,12 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $data = $request->validate([
-            'name' => 'nullable|string|max:255',
-            'email' => 'nullable|string|email|max:255|unique:users,email,'.$user->id,
-            'password' => ['nullable', 'confirmed'],
-            'photo' => ['nullable', 'image', 'mimes:jpeg,png,jpg'],
-            'phone' => ['nullable','digits:10'],
-            'address'=>'nullable',
-            'bio' => 'nullable',
+            'isVerified' => 'nullable',
         ]); 
 
-        if($request->hasFile('photo')){
-            $fname = Str::random(20);
-            $fexe = $request->file('photo')->extension();
-            $fpath = "$fname.$fexe";
-
-            $request->file('photo')->storeAs('users', $fpath, ['disk' => 'my']); 
-
-            if($user->photo){
-                Storage::disk('my')->delete('users/'.$user->photo);
-            }
-
-            $data['photo'] = 'users/'.$fpath;
+        if($request->has('isVerified')){
+            $data['isVerified'] == "1" ? true : false;
         }
-
-        $data['password'] = Hash::make($request->password);
 
         $user->update($data);
 
@@ -118,6 +92,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        Storage::disk('my')->delete($user->photo);
+        $user->delete();
+        return redirect(route('admin.landlords.index'))->with('delete', 'User deleted Sucessfully');
     }
 }

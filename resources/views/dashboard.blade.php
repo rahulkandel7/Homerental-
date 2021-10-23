@@ -92,7 +92,7 @@
                             {{$tenant->phone}}
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
-                            <form action="{{route('users.destroy',$tenant->id)}}" method="post" class="inline-block">
+                            <form action="{{route('admin.users.destroy',$tenant->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
                                 <button type="submit">
@@ -157,7 +157,7 @@
                             {{$landlord->address}}
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
-                            <form action="{{route('users.destroy',$landlord->id)}}" method="post" class="inline-block">
+                            <form action="{{route('admin.users.destroy',$landlord->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
                                 <button type="submit">

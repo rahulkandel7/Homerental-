@@ -75,7 +75,7 @@
                         </td>
                         <td class="text-gray-600 px-5 border w-32 py-2">
                             <a href="{{ route('users.edit', $landlord->id) }}"><i class="fas fa-edit hover:text-primary font-bold cursor-pointer text-xl"></i></a>
-                            <form action="{{route('users.destroy',$landlord->id)}}" method="post" class="inline-block">
+                            <form action="{{route('admin.users.destroy',$landlord->id)}}" method="post" class="inline-block">
                                 @csrf
                                 @method('delete')
                                 <button type="submit">

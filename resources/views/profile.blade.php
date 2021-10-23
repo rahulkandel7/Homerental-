@@ -17,7 +17,10 @@
             <img src="/storage/{{$user->photo}}" class="w-36 h-36 rounded-full">
         </div>
         <h2 class="text-primary text-center font-bold text-2xl py-2">
-            {{ $user->name }} <span class="text-primary ml-1 text-base"><i class="fas fa-check-circle"></i></span>
+            {{ $user->name }} 
+            @if($user->isVerified == 1) 
+                <span class="text-primary ml-1 text-base"><i class="fas fa-check-circle"></i></span> 
+            @endif
         </h2>
         <hr class="border-b-2 mb-2 border-gray-300">
         <h2 class="text-primary font-semibold text-xl py-2">

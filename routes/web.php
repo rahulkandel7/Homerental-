@@ -58,6 +58,7 @@ Route::middleware(['auth', 'isAdmin','verified'])->prefix('admin')->name('admin.
     Route::resource('tenants', App\Http\Controllers\Admin\TenantController::class);
     Route::resource('landlords', App\Http\Controllers\Admin\LandlordController::class);
     Route::resource('calls', App\Http\Controllers\Admin\CallController::class);
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class);
 });
 
 Route::get('dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('dashboard')->middleware(['auth', 'isAdmin','verified'])->prefix('admin');
