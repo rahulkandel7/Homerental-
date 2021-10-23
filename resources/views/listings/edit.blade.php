@@ -109,6 +109,22 @@
     
                         </div>
                     </div>
+                    
+                    <div class="my-3">
+                        <label for="thumbnail" class="block text-primary font-semibold mb-2">
+                        Thumbnail Photo
+                        </label>
+                        <input type="file" name="thumbnail" id="thumbnail" class="sm:w-auto w-full border-0 focus:ring-primary shadow-md rounded-md @if ($errors->has('thumbnail'))
+                            border-red-500 border-b-2 focus:border-primary
+                        @endif" value="{{old('thumbnail')}}">
+
+                        @error('thumbnail')
+                            <p class="text-red-400 py-2 text-sm">
+                                * Insert Thumbnail Photo
+
+                            </p>
+                        @enderror
+                    </div>
 
                     <div class="md:flex">
                         <div class="my-3">

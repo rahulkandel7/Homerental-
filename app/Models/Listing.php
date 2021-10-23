@@ -14,6 +14,7 @@ class Listing extends Model
         'municipality',
         'wardno',
         'price',
+        'thumbnail',
         'tbphoto',
         'hallphoto',
         'kitchenphoto',

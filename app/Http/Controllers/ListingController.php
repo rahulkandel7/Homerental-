@@ -46,6 +46,7 @@ class ListingController extends Controller
             'municipality' => ['required','string'],
             'wardno' => ['required', 'integer'],
             'price' => ['required', 'integer'],
+            'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'tbphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'hallphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'kitchenphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
@@ -60,12 +61,24 @@ class ListingController extends Controller
             'tenant_type' => 'required',
             'gender' => 'required',
             'type' => 'required',
+
         ]);
 
         $data['user_id'] = Auth::user()->id;
 
         $data['isNegotiable'] = $request->isNegotiable == '0' ? false : true;
         $data['isAvailable'] = $request->isNegotiable == '0' ? false : true;
+
+        if($request->hasFile('thumbnail')){
+            $fname = Str::random(20);
+            $fexe = $request->file('thumbnail')->extension();
+            $fpath = "$fname.$fexe";
+
+            $request->file('thumbnail')->storeAs('listings', $fpath, ['disk' => 'my']); 
+
+
+            $data['thumbnail'] = 'listings/'.$fpath;
+        }
 
         if($request->hasFile('tbphoto')){
             $fname = Str::random(20);
@@ -171,6 +184,7 @@ class ListingController extends Controller
             'municipality' => ['required','string'],
             'wardno' => ['required', 'integer'],
             'price' => ['required', 'integer'],
+            'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'tbphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'hallphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
             'kitchenphoto' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:5048'],
@@ -192,6 +206,21 @@ class ListingController extends Controller
         $data['isNegotiable'] = $request->isNegotiable == '0' ? false : true;
         $data['isAvailable'] = $request->isAvailable == '0' ? false : true;
 
+        if($request->hasFile('thumbnail')){
+            $fname = Str::random(20);
+            $fexe = $request->file('thumbnail')->extension();
+            $fpath = "$fname.$fexe";
+
+            $request->file('thumbnail')->storeAs('listings', $fpath, ['disk' => 'my']); 
+
+
+            if($listing->tbphoto){
+                Storage::disk('my')->delete('listings/'.$listing->tbphoto);
+            }
+
+            $data['thumbnail'] = 'listings/'.$fpath;
+        }
+
         if($request->hasFile('tbphoto')){
             $fname = Str::random(20);
             $fexe = $request->file('tbphoto')->extension();
@@ -201,7 +230,7 @@ class ListingController extends Controller
             
 
             if($listing->tbphoto){
-                Storage::disk('my')->delete($listing->tbphoto);
+                Storage::disk('my')->delete('listings/'.$listing->tbphoto);
             }
 
             $data['tbphoto'] = 'listings/'.$fpath;
@@ -216,7 +245,7 @@ class ListingController extends Controller
             $request->file('hallphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->hallphoto){
-                Storage::disk('my')->delete($listing->hallphoto);
+                Storage::disk('my')->delete('listings/'.$listing->hallphoto);
             }
 
             $data['hallphoto'] = 'listings/'.$fpath;
@@ -230,7 +259,7 @@ class ListingController extends Controller
             $request->file('kitchenphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->kitchenphoto){
-                Storage::disk('my')->delete($listing->kitchenphoto);
+                Storage::disk('my')->delete('listings/'.$listing->kitchenphoto);
             }
 
             $data['kitchenphoto'] = 'listings/'.$fpath;
@@ -244,7 +273,7 @@ class ListingController extends Controller
             $request->file('psphoto')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->psphoto){
-                Storage::disk('my')->delete($listing->psphoto);
+                Storage::disk('my')->delete('listings/'.$listing->psphoto);
             }
 
             $data['psphoto'] = 'listings/'.$fpath;
@@ -258,7 +287,7 @@ class ListingController extends Controller
             $request->file('froom')->storeAs('listings', $fpath, ['disk' => 'my']); 
 
             if($listing->froom){
-                Storage::disk('my')->delete($listing->froom);
+                Storage::disk('my')->delete('listings/'.$listing->froom);
             }
 
             $data['froom'] = 'listings/'.$fpath;
@@ -273,7 +302,7 @@ class ListingController extends Controller
 
 
             if($listing->sroom){
-                Storage::disk('my')->delete($listing->sroom);
+                Storage::disk('my')->delete('listings/'.$listing->sroom);
             }
 
             $data['sroom'] = 'listings/'.$fpath;
@@ -292,12 +321,13 @@ class ListingController extends Controller
      */
     public function destroy(Listing $listing)
     {
-        Storage::disk('my')->delete($listing->tbphoto);
-        Storage::disk('my')->delete($listing->hallphoto);
-        Storage::disk('my')->delete($listing->kitchenphoto);
-        Storage::disk('my')->delete($listing->psphoto);
-        Storage::disk('my')->delete($listing->froom);
-        Storage::disk('my')->delete($listing->sroom);
+        Storage::disk('my')->delete('listings/'.$listing->thumbnail);
+        Storage::disk('my')->delete('listings/'.$listing->tbphoto);
+        Storage::disk('my')->delete('listings/'.$listing->hallphoto);
+        Storage::disk('my')->delete('listings/'.$listing->kitchenphoto);
+        Storage::disk('my')->delete('listings/'.$listing->psphoto);
+        Storage::disk('my')->delete('listings/'.$listing->froom);
+        Storage::disk('my')->delete('listings/'.$listing->sroom);
         $listing->delete();
 
         return redirect(route('home'))->with('delete', 'Your Lisitngs has been Deleted');

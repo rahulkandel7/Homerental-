@@ -19,6 +19,7 @@ class CreateListingsTable extends Migration
             $table->string('municipality');
             $table->integer('wardno');
             $table->integer('price');
+            $table->string('thumbnail');
             $table->string('tbphoto')->nullable();
             $table->string('hallphoto')->nullable();
             $table->string('kitchenphoto')->nullable();
