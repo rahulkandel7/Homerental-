@@ -35,12 +35,12 @@
                             and it is also a waste of time. To address your concerns, we created our website Homienepal.com,
                             where you can discover rooms and houses for rent as needed.
                         </p>
-                        <div class="bg-gray-200 rounded-full shadow-md  h-12 mt-2 flex">
+                        <div class="bg-gray-200 rounded-full shadow-md  h-10 md:h-12 mt-2 flex">
                             <div class="relative w-full">
                                 <form action="{{ route('search') }}" method="get">
                                     <span class="text-primary pl-5 text-xl"><i class="fas fa-map-marker-alt"></i></span>
                                     <input type="text" name="search" id="search" placeholder="Where you want to go?" class="border-0 bg-transparent focus:border-0 focus:ring-transparent outline-none mt-1 text-xs md:text-base">
-                                    <input type="submit" value="Search" class="hover:bg-primary cursor-pointer h-12 px-4 md:px-7 rounded-full text-white absolute right-0" >
+                                    <input type="submit" value="Search" class="hover:bg-primary cursor-pointer h-10 md:h-12 px-4 md:px-7 rounded-full text-white absolute right-0" >
                                 </form>
                             </div>
                         </div>
