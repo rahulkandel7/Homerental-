@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Listing;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class FrontendController extends Controller
 
     public function blog()
     {
-        return view('blog');
+        $blogs = Blog::all();
+        return view('blogs.index', compact('blogs'));
     }
 
     public function tfaq()
