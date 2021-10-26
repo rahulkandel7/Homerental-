@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [App\Http\Controllers\FrontendController::class, 'home'])->name('home');
 
 //Normal Routing
 Route::get('/renting', [App\Http\Controllers\FrontendController::class, 'tenant'])->name('tenant');

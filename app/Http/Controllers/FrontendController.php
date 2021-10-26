@@ -73,4 +73,10 @@ class FrontendController extends Controller
     {
         return view('contact');
     }
+
+    public function home()
+    {
+        $blogs = Blog::latest()->limit(10)->get();
+        return view('home', compact('blogs'));
+    }
 }

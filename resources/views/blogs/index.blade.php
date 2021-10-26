@@ -25,10 +25,10 @@
                         {{$blog->title}}
                     </p>
                     <p class="text-gray-500 text-justify text-sm max-h-24 overflow-hidden">
-                        {!! $blog->description !!}
+                        {!! $blog->body !!}
                     </p>
                     <p class="text-gray-500 text-sm mt-2 font-semibold">
-                        {{$blog->created_at}}
+                        {{\Carbon\Carbon::parse($blog->created_at)->diffForHumans()}}
                     </p>
                 </div>
             @endforeach
