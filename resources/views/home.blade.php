@@ -253,7 +253,7 @@
                         <p class="text-black font-bold text-lg mt-2">
                             {{$blog->title}}
                         </p>
-                        <p class="text-gray-500 text-justify text-sm max-h-24 overflow-hidden">
+                        <p class="text-gray-500 text-justify text-sm h-24 overflow-hidden">
                             {!! $blog->body !!}
                         </p>
                         <p class="text-gray-500 text-sm mt-2 font-semibold">
