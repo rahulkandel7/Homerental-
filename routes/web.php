@@ -20,6 +20,7 @@ Route::get('/', [App\Http\Controllers\FrontendController::class, 'home'])->name(
 Route::get('/renting', [App\Http\Controllers\FrontendController::class, 'tenant'])->name('tenant');
 Route::get('/renting-out', [App\Http\Controllers\FrontendController::class, 'landlord'])->name('landlord');
 Route::get('/blogs', [App\Http\Controllers\FrontendController::class, 'blog'])->name('blog');
+Route::get('/blogs/{id}', [App\Http\Controllers\FrontendController::class, 'showblog'])->name('showblog');
 Route::get('/tenant-faq', [App\Http\Controllers\FrontendController::class, 'tfaq'])->name('tfaq');
 Route::get('/landlord-faq', [App\Http\Controllers\FrontendController::class, 'lfaq'])->name('lfaq');
 Route::get('/how-to-rent', [App\Http\Controllers\FrontendController::class, 'howtorent'])->name('howtorent');

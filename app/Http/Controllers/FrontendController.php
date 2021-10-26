@@ -25,6 +25,13 @@ class FrontendController extends Controller
         return view('blogs.index', compact('blogs'));
     }
 
+    public function showblog(Request $request)
+    {
+        $id = $request->id;
+        $blog = Blog::find($id);
+        return view('blogs.show', compact('blog'));
+    }
+
     public function tfaq()
     {
         return view('faq.tenant');

@@ -248,25 +248,27 @@
             <div class="flex flex-wrap justify-start mt-5">
 
                 @foreach ($blogs as $blog)
-                    <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service overflow-hidden">
-                        <img src="storage/{{$blog->image}}" alt="">
-                        <p class="text-black font-bold text-lg mt-2">
-                            {{$blog->title}}
-                        </p>
-                        {{-- <p class="text-gray-500 text-justify text-sm h-24 overflow-hidden">
-                            {!! $blog->body !!}
-                        </p> --}}
-                        <p class="text-gray-500 text-sm mt-2 font-semibold">
-                            {{\Carbon\Carbon::parse($blog->created_at)->diffForHumans()}}
-                        </p>
-                    </div>
+                    <a href="{{ route('showblog', $blog->id) }}">
+                        <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service overflow-hidden">
+                            <img src="storage/{{$blog->image}}" alt="">
+                            <p class="text-black font-bold text-lg mt-2">
+                                {{$blog->title}}
+                            </p>
+                            {{-- <p class="text-gray-500 text-justify text-sm h-24 overflow-hidden">
+                                {!! $blog->body !!}
+                            </p> --}}
+                            <p class="text-gray-500 text-sm mt-2 font-semibold">
+                                {{\Carbon\Carbon::parse($blog->created_at)->diffForHumans()}}
+                            </p>
+                        </div>
+                    </a>
                 @endforeach
                 
 
             </div>
 
             <div class="flex justify-center items-center mt-5 wow bounceInUp">
-                <a href="" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary shadow hover:shadow-md">View More</a>
+                <a href="{{ route('blogs') }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary shadow hover:shadow-md">View More</a>
             </div>
 
         </div>
