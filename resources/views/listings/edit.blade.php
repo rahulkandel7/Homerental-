@@ -327,9 +327,7 @@
 
 
                     <div class="flex justify-center mb-3 mx-5 md:mx-0">
-                        <x-button class="ml-3 px-10 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
-                            {{ __('Update Now') }}
-                        </x-button>
+                        <input type="submit" value="Update Now" class="ml-3 px-10 md:px-40 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">
                     </div>
 
                 </form>

@@ -56,7 +56,7 @@
     <!-- Our Services Start -->
         <div class="w-11/12 mx-auto my-10 wow bounceInUp" data-wow-delay="2s">
             <h2 class="text-primary text-4xl text-center font-bold">
-                Our Services
+                Why Us?
             </h2>
             <p class="text-gray-400 text-center my-2">
                 when it comes to room finding. We are here for your every help.

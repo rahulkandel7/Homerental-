@@ -54,7 +54,7 @@ class BlogController extends Controller
             $fexe = $request->file('image')->extension();
             $fpath = "$fname.$fexe";
 
-            $request->file('image')->storeAs('public/blogs', $fpath); 
+            $request->file('image')->storeAs('blogs', $fpath, ['disk' => 'my']); 
 
             $data['image'] = 'blogs/'.$fpath;
         }
@@ -109,10 +109,10 @@ class BlogController extends Controller
             $fexe = $request->file('image')->extension();
             $fpath = "$fname.$fexe";
 
-            $request->file('image')->storeAs('public/blogs', $fpath); 
+            $request->file('image')->storeAs('blogs', $fpath, ['disk' => 'my']); 
 
             if($blog->image){
-                Storage::delete('public/'. $blog->image);
+                Storage::disk('my')->delete('blogs/'.$blog->image);
             }
 
             $data['image'] = 'blogs/'.$fpath;
@@ -131,7 +131,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        Storage::delete('public/'.$blog->image);
+        Storage::disk('my')->delete('blogs/'.$blog->image);
         $blog->delete();
 
         return redirect(route('admin.blogs.index'))->with('delete', 'Blog has been Deleted');
