@@ -181,7 +181,7 @@
                         <div class="h-full relative z-10">
                             <div x-show.immediate="testimonialActive === 1">
                                 <p class="text-gray-600 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 1">
-                                    Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                    It is very helpful site to find rent. I have found my rent from here
                                 </p>
                             </div>
                             
@@ -203,7 +203,7 @@
                                 @click.prevent="testimonialActive = 1" 
                                 class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
                                 :class="{'h-12 w-12 opacity-25 bg-yellow-100 text-gray-600': testimonialActive != 1, 'h-16 w-16 opacity-100 bg-secondary text-white': testimonialActive == 1 }"	
-                            >JD</button>
+                            >RSK</button>
                             <button 
                                 @click.prevent="testimonialActive = 2" 
                                 class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline h-16 w-16 inline-block bg-secondary rounded-full mx-2"
@@ -218,8 +218,8 @@
                          
                         <div class="flex justify-center px-6 pt-2 pb-6 md:py-6">
                             <div class="text-center" x-show="testimonialActive == 1">
-                                <h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">John Doe</h2>
-                                <small class="text-gray-500 text-xs md:text-sm truncate">CEO, ABC Inc.</small>
+                                <h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">Rajni Sharma Kandel</h2>
+                                <small class="text-gray-500 text-xs md:text-sm truncate">Student</small>
                             </div>
     
                             <div class="text-center" x-show="testimonialActive == 2">
