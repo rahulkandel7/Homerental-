@@ -268,7 +268,7 @@
             </div>
 
             <div class="flex justify-center items-center mt-5 wow bounceInUp">
-                <a href="{{ route('blogs') }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary shadow hover:shadow-md">View More</a>
+                <a href="{{ route('blog') }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary shadow hover:shadow-md">View More</a>
             </div>
 
         </div>
