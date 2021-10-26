@@ -248,8 +248,8 @@
             <div class="flex flex-wrap justify-start mt-5">
 
                 @foreach ($blogs as $blog)
-                    <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service">
-                        <img src="{{asset('images/background/hero.png')}}" alt="">
+                    <div class="shadow-lg hover:shadow-xl cursor-pointer w-72 mb-2 p-5 mr-2 service overflow-hidden">
+                        <img src="storage/{{$blog->image}}" alt="">
                         <p class="text-black font-bold text-lg mt-2">
                             {{$blog->title}}
                         </p>
