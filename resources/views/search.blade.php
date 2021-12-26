@@ -37,7 +37,7 @@
                 <!-- item display-->
                     <a href="{{ route('look',$listing->id) }}">
                         <div class="bg-white shadow-xl w-60 rounded-lg py-2 service mx-2 my-4">
-                            <img src="{{$listing->thumbnail}}" class="px-3 py-2">
+                            <img src="/storage/{{$listing->thumbnail}}" class="px-3 py-2">
                             <p class="px-5 py-2">
                                 Rs {{$listing->price}} <span class="text-gray-500">/ Month</span>
                             </p>
