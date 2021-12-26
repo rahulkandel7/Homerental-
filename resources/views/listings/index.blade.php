@@ -27,7 +27,7 @@
                 <a href="{{ route('listings.show',$listing->id) }}">
                     <div class="bg-white shadow-xl service rounded-lg py-2">
                         <div class="flex justify-center items-center">
-                            <img src="/storage/{{$listing->hallphoto}}" alt="" class="w-32">
+                            <img src="/storage/{{$listing->thumbnail}}" alt="" class="w-32">
             
                         </div>
                             <p class="text-gray-500 font-semibold text-center pt-3">
