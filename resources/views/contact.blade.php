@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <p class="px-2 text-xl text-black font-semibold">
-                        +977-9809247422
+                        +977-9745374282
                     </p>
                 </div>
 
@@ -94,7 +94,7 @@
                 <div class="flex items-center mt-3">
                     <div class="w-10 h-10 rounded-full bg-primary ">
                         <div class="flex justify-center items-center text-white hover:text-blue-500 cursor-pointer">
-                             <a href="https://www.facebook.com/homienepal"><i class="fab fa-facebook mt-3  "></i></a>
+                             <a href="https://www.facebook.com/homieenepal"><i class="fab fa-facebook mt-3  "></i></a>
                         </div>
                     </div>
 
