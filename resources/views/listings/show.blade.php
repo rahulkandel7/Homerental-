@@ -90,9 +90,9 @@
 
                         <a href="tel:+977981529300" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Contact Now</a> 
 
-                        @if (Auth::user()->id == $listing->id)
+                        {{-- @if (Auth::user()->id == $listing->id) --}}
                             <a href="{{ route('listings.edit',$listing->id) }}" class="px-4 py-1 bg-primary text-white border-2 rounded-lg border-primary hover:bg-transparent hover:text-primary">Edit Now</a>
-                        @endif
+                        {{-- @endif --}}
 
                         <form action="{{ route('listings.destroy',$listing->id) }}" method="post" class="inline-block">
                             @csrf
