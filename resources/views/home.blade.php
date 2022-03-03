@@ -53,6 +53,17 @@
         </div>
     <!-- Hero Section Close -->
 
+    <!-- Our Products Start -->
+        <div class="w-11/12 mx-auto my-10 wow bounceInUp">
+            <h2 class="text-primary text-4xl text-center font-bold">
+                Latest Listings
+            </h2>
+
+            
+            
+        </div>
+    <!-- Our Products Close -->
+
     <!-- Our Services Start -->
         <div class="w-11/12 mx-auto my-10 wow bounceInUp" data-wow-delay="2s">
             <h2 class="text-primary text-4xl text-center font-bold">

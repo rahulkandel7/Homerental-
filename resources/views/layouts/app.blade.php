@@ -96,7 +96,7 @@
                                 <li>
                                   <a class="rounded-t hover:bg-gray-100 {{ request()->routeIs('tenant') ? 'bg-gray-100' : 'bg-white' }} text-primary py-2 px-4 block whitespace-no-wrap" href="{{ route('tenant') }}" >
                                       <p class="font-semibold text-primary">
-                                        Find a Place to Rent
+                                        Find a Place to Rent<span class="italic text-xs pl-2">(For Tenant)</span>
                                       </p>
                                       <p class="font-sm text-gray-500 " style="font-size: .8rem">
                                         Why Homie Nepal To Find a Place To Rent
@@ -106,7 +106,7 @@
                                 <li >
                                     <a class="rounded-b hover:bg-gray-100 {{ request()->routeIs('landlord') ? 'bg-gray-100' : 'bg-white' }}  text-primary py-2 px-4 block whitespace-no-wrap" href="{{ route('landlord') }}" >
                                         <p class="font-semibold text-primary">
-                                          Rent Out Your Place
+                                          Rent Out Your Place<span class="italic text-xs pl-2">(For Landlord)</span>
                                         </p>
                                         <p class="font-sm text-gray-500 " style="font-size: .8rem">
                                             Why Homie Nepal To Rent Your Place
@@ -294,7 +294,7 @@
                             Gaindakot-2, Nawalpur
                         </p>
                         <p class="text-gray-300 text-sm pt-1 lg:text-center">
-                            +977-9809247422
+                            +977-9745374282
                         </p>
                         <p class="text-gray-300 text-sm pt-1 lg:text-center">
                             homienepal@gmail.com
@@ -354,7 +354,7 @@
                             </li>
 
                             <li class="text-xl">
-                                <a href="https://www.facebook.com/homienepal"><i class="fab fa-facebook mt-3  facebook"></i></a>
+                                <a href="https://www.facebook.com/HomieeNepal/"><i class="fab fa-facebook mt-3  facebook"></i></a>
 
                                 <a href="https://www.instagram.com/homienepal"><i class="fab fa-instagram mt-3 ml-3 instagram"></i></a>
                             </li>
