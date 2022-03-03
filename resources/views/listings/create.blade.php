@@ -267,7 +267,7 @@
                         </label>
                         <textarea name="rules" id="rules" class="border-0 focus:ring-primary editors shadow-md rounded-md @if ($errors->has('rules'))
                             border-red-500 border-b-2 focus:border-primary
-                        @endif" placeholder="Add your Rules to be follow"> {{old('rules')}} </textarea>
+                        @endif" placeholder="Add your Rules to be follow" value="Not any rules"> {{old('rules')}} </textarea>
 
                         @error('rules')
                             <p class="text-red-400 py-2 text-sm">
